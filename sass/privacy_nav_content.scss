@@ -1,0 +1,219 @@
+
+
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+  	font-size: 24px; 
+  	display: inline-block;
+  	width: 1em;
+  	height: 1em;
+  	line-height: 1;
+  	text-transform: none;
+  	letter-spacing: normal;
+  	word-wrap: normal;
+
+}
+
+.fws-menu {
+  	position: fixed;
+  	z-index: 1;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  	background-color: $deep_blue;
+  	color: #fff;
+  	visibility: hidden;
+  	backface-visibility: hidden;
+  	transform: translateZ(0);
+  	transform: translateY(-100%);
+  	transition: all 0.5s;
+
+  	a,
+  	li {
+    	  line-height: 50px;
+    	  height: 50px;
+  	}
+
+  	&.is-active {
+    	  visibility: visible;
+    	  transform: translateY(0);
+    	  transition: all 0.5s;
+  	}
+
+  	@include respond-to (medium) {
+      	transform: translateY(0);
+      	transform: translateX(100%);
+      	left: auto;
+      	width: 350px;
+      	right: 0;
+
+      	&.is-active {
+        	  transform: translateX(0);
+      	}
+  	}
+}
+
+.menu-icon {
+  	display: none;
+
+    @include respond-to (medium) {
+    	display: block;
+    	position: absolute;
+    	top: 10px;
+    	left: 10px;
+  	}
+}
+
+/******************__sub_menu__***********************/
+
+.sub-menu {
+  	position: relative;
+
+  	@include respond-to (medium) {
+      	box-shadow: -2px 0px 3px 0px #333;
+      	left: 50px;
+      	z-index: 10;
+  	}
+}
+
+.fws-menu-content,
+.fws-menu-content ul {
+  	position: absolute;
+  	top: 0;
+  	width: 100%;
+  	height: 100%;
+  	padding-top: 50px;
+  	padding-left: 0;
+  	transition: all 0.3s;
+
+  	a {
+      	display: block;
+      	padding: 0 40px;
+      	color: white;
+      	text-decoration: none;
+      	white-space: nowrap;
+      	overflow: hidden;
+      	text-overflow: ellipsis;
+
+      	&:hover {
+        		background: $blue;
+        		color: $deep_blue;
+      	}
+  	  }
+
+  	li {
+      	text-align: left;
+      	color: $deep_blue;
+  	}
+
+  	&.is-hidden {
+      	opacity: 0;
+      	transform: translateX(100%);
+
+      	.back-block {
+        		display: none;
+      	}
+  	}
+
+  	&.move-out {
+    	> li > a {
+      		transform: translateX(-100%);
+    	}
+  	}
+
+  	@include respond-to (medium) {
+  	    margin-top: 0;
+  	    background: $deep_blue;
+
+  	    li {
+  	      	color: white;
+  	    }
+
+      	&.move-out {
+        		background: darken($deep_blue, 5);
+        		transform: translateX(-50px);
+        		> li > a {
+          		transform: none;
+        		}
+      	}
+  	}
+}
+
+
+/******************__back-block__close__***********************/
+ul .back-block {
+  	display: none;
+
+ 	  @include respond-to (medium) {
+  	    display: block;
+  	    position: absolute;
+  	    left: -50px;
+  	    top: 0;
+  	    width: 50px;
+  	    height: 100%;
+  	    opacity: 0;
+  	}
+}
+
+.has-children > a,
+.go-back a {
+  	position: relative;
+}
+
+.has-children > a::after {
+  	content: '\E5CC'; 
+  	font-family: 'Material Icons';
+  	font-size: 1.4em;
+  	position: absolute;
+  	right: 20px;
+}
+
+.go-back > a {
+
+  	&::before {
+      	content: '\E5CB'; 
+      	font-family: 'Material Icons';
+      	font-size: 1.4em;
+      	position: absolute;
+      	left: 20px;
+  	}
+}
+
+.fws-menu-close {
+  	position: absolute;
+  	z-index: 5;
+  	right: 0;
+  	top: 0;
+
+
+ 	&:before {
+    	content: '\E5CD'; 
+    	font-family: 'Material Icons';
+    	font-size: 1.5em;
+    	position: absolute;
+    	height: 50px;
+    	width: 50px;
+    	top: 0;
+    	right: 0px;
+    	color: white;
+  	}
+}
+
+#menu-close {
+  	display: none;
+
+    @include respond-to (medium) {
+  	    display: block;
+  	    position: fixed;
+  	    left: -1000px;
+  	    top: 0;
+  	    bottom: 0;
+  	    width: 300%;
+  	    height: 100%;
+  	    z-index: -1;
+  	    opacity: 0;
+  	}
+}

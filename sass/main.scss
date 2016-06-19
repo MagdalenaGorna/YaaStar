@@ -1,0 +1,118 @@
+@import "fron_page.scss";
+@import "privacy.scss";
+@import "privacy_icon.scss";
+
+@import "fonts.scss";
+@import "icon.scss";
+
+
+
+html {
+  	box-sizing: border-box;
+  	font-family: adobe-clean,sans-serif;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	height: 100%;
+}
+
+h1, h2, h3 {
+	font-weight: lighter;
+	margin: 0;
+}
+
+ul {
+	margin: auto 0;
+	padding: 0;
+}
+
+header{
+	height: 95px;
+	background-color: $deep_blue;
+}
+
+*, *:before, *:after {
+  	box-sizing: inherit;
+}
+
+#wrap {
+	min-height: 100%;
+}
+
+#main {
+	overflow:auto;
+	padding-bottom: 50px;
+} 
+
+#footer {
+	position: relative;
+	margin-top: -50px; 
+	height: 50px;
+	clear:both;
+}
+
+/************__Footer__******************/
+
+
+footer {
+	background: linear-gradient(to bottom,$deep_blue, $blue); 
+
+}
+footer ul {
+	text-align: center;
+
+	li {
+		margin: auto;
+		display: inline;
+		text-align: center;
+	
+		a {
+			text-decoration: none;
+			color: rgb(255, 255, 255);
+			font-size: 11px;
+			padding: 8px;
+			&:hover {
+				color: $deep_blue;
+			}
+		}
+	}
+}
+
+/************__ScrollUp__******************/
+
+.scrollup {
+    display: none;
+    position: fixed;
+    bottom: 12px;
+    right: 20px;
+    opacity: 0.8;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&:hover a {
+		display: inline;
+	}
+
+  	@include respond-to (medium) {
+  		right: 60px;
+  	}
+}
+
+
+
+
+
+
+
+
+
+
+

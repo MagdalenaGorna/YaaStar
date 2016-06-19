@@ -1,0 +1,86 @@
+.front_card {
+  width: 1150px;
+  margin: auto;
+  padding: 40px; }
+
+/*****************__Logo__*****************/
+.front_logo {
+  width: 300px;
+  display: inline-block; }
+  .front_logo img {
+    display: block;
+    margin: auto; }
+  .front_logo h2 {
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #5a5a5a;
+    text-align: center; }
+
+/*************__Countdown__*****************/
+.front_countdown {
+  width: 375px;
+  padding: 15px;
+  display: inline-block;
+  color: #4853b2;
+  border-left: 0.5px solid #84a3e8; }
+
+.fc_header {
+  line-height: 36px; }
+
+.fc_counter time {
+  display: inline-block;
+  width: 80px; }
+  .fc_counter time h1 {
+    display: block; }
+
+.fc_joinus a {
+  clear: both; }
+
+/*************__SignUp__*****************/
+.front_signup {
+  box-sizing: border-box;
+  float: right;
+  height: 330px;
+  width: 285px;
+  margin-right: 100px; }
+
+.rect {
+  position: absolute;
+  z-index: 10; }
+
+.form {
+  position: relative;
+  z-index: 11;
+  width: 290px;
+  height: 320px;
+  padding-left: 20px; }
+  .form h2 {
+    color: #84a3e8; }
+
+.field {
+  margin-bottom: 10px; }
+
+.field_half {
+  display: inline-block; }
+  .field_half input {
+    width: 105px;
+    margin-right: 8px; }
+
+input {
+  margin: auto;
+  width: 236px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccd6dd; }
+
+.signup_btn {
+  width: 170px;
+  height: 40px;
+  background-color: #4853b2;
+  border-bottom: 0;
+  border-radius: 4px;
+  color: white;
+  margin-top: 50px;
+  margin-left: 45px; }
+
+/*# sourceMappingURL=fron_page.css.map */

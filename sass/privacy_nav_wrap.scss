@@ -1,0 +1,93 @@
+@import "mixin.scss";
+
+$transition: 0.3s;
+$deep_blue: rgb(72, 83, 178);
+$blue: rgb(132, 163, 232);
+
+.container {
+	  @include respond-to (large) {
+  		  padding-right: 40px;
+  	}
+}
+
+main {
+	  font-family: sans-serif;
+	  color: #3f4c56;
+	  letter-spacing: 1px;
+    padding: 3%;
+    p {
+        text-align: justify;
+        color: #3f4c56;
+    }
+  	@include respond-to (medium) {
+  		  margin-right: 8%;
+  	}
+
+}
+
+
+.main-nav {
+  	transition: all $transition;
+
+  	ul {
+    	  padding-left: 0;
+    	  list-style: none;
+    }
+}
+
+.nav-list {
+ 	  padding: 7px;
+  	margin: 0;
+  	text-align: center;
+  	background: $deep_blue;
+  	box-shadow: 0 5px 5px 0px #bbb;
+
+  	.material-icons {
+    	  font-size: 2em;
+  	}
+
+ 	  @include respond-to (medium) {
+      	position: fixed;
+      	right: 0;
+      	top: 0;
+      	height: 100%;
+      	box-shadow: -5px 0 5px 0px #bbb;
+      	padding: 0;
+  	}
+}
+
+.nav-item {
+  	position: relative;
+  	text-align: center;
+  	display: inline-block;
+  	margin-right: 0.25em;
+  	padding: 5px;
+
+  	&:last-child {
+    	  margin-right: 0;
+    }
+
+  	@include respond-to (medium) {
+    	  display: block;
+    	  margin: 0;
+    	  height: 14vh;
+    	  padding-top: 50%;
+  	}
+}
+
+.nav-link {
+  	color: white;
+  	text-decoration: none;
+
+  	&:hover {
+    	  color: $blue;
+  	}
+}
+
+.nav-text {
+  	font-size: 0.8em;
+  	display: block;
+}
+
+
+
